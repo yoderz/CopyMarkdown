@@ -1,6 +1,6 @@
 function onOpen() {
   DocumentApp.getUi()
-    .createMenu('AI Tools')
+    .createMenu('Export Tools')
     .addItem('Copy Selection as Markdown', 'copySelectionAsMarkdown')
     .addToUi();
 }
@@ -189,8 +189,7 @@ function showClipboardDialog(markdownText) {
       }
       // Attempt automatic copy on load
       window.onload = function() {
-        copyText();
-        setTimeout(() => google.script.host.close(), 1200);
+        document.querySelector("button").focus();
       };
     </script>
   `)
